@@ -6,27 +6,6 @@ const CURRENT_USER_HANDLE = 'treasurymog';
 const MAX_DELAY = 2000;
 const FAILURE_ODDS = 0.05;
 
-// Our server is very lean and quick, given that it doens't actually connect
-// to a database or deal with any sort of scale!
-// We want to provide a more realistic experience, so we'll do 2 things for
-// all responses:
-// - Add an arbitrary delay of 0-2 seconds
-// - Add a 5% chance of a 500 error
-const simulateProblems = (res, data) => {
-  const delay = Math.random() * MAX_DELAY;
-
-  setTimeout(() => {
-    const shouldError = Math.random() <= FAILURE_ODDS;
-
-    if (shouldError) {
-      res.sendStatus(500);
-      return;
-    }
-
-    res.json(data);
-  }, delay);
-};
-
 const getUser = handle => {
   return data.users[handle.toLowerCase()];
 };
