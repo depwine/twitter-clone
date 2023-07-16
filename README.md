@@ -117,15 +117,6 @@ Specifically, here are the rules:
 
 ## Error screens
 
-Certain requests will fail 5% of the time. The API endpoints that can fail are:
-
-- GET /api/me/home-feed
-- GET /api/me/profile
-- GET /api/tweet/:tweetId
-- POST /api/tweet
-
-For the GET endpoints, you can create an error screen, and show it if the request fails:
-
 ![Failure screen](./assets/screenshots/failure.png)
 
 
