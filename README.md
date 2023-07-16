@@ -1,4 +1,4 @@
-# Twitter project
+# Twitter project - Front End (Back end was provided from template)
 
 ## Twitter crash course
 
